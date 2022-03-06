@@ -1,0 +1,81 @@
+% chktex-file 1: Command terminated with space.
+% chktex-file 8: Wrong length of dash may have been used.
+% chktex-file 19: Use "'" (ASCII 39) instead  of "´" (ASCII 180).
+% chktex-file 39: Double space found.
+
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{
+    left=0.5in,
+    right=0.5in,
+    top=0.75in,
+    bottom=0.75in,
+}
+\usepackage{lastpage}
+\usepackage{fancyhdr}
+
+% \usepackage[british, chinese]{babel}
+\usepackage{csquotes}
+\usepackage{datetime2}
+
+\usepackage[
+fixed,
+% pro, %fontawesome 5 rpo
+]{fontawesome5}
+\faStyle{light}
+\usepackage[
+    UTF8,
+    heading = true,
+    scheme = plain,
+    % fontset = macold,% 旧 mac 配置
+    fontset = founder,% 方正字体（GBK）
+]{ctex}
+\ctexset{
+    section/beforeskip=2pt,
+}
+\usepackage{anyfontsize}
+% Use Palatino font for English
+% \setmainfont{Palatino}
+\usepackage{newpxtext}%,newpxmath}
+\setlength\parindent{0pt}
+% 方正字体，粗体设置为黑体
+\setCJKmainfont{FZShuSong-Z01}[
+    BoldFont=FZHei-B01,
+    ItalicFont=FZKai-Z03,
+]
+% 修正华文字体引号宽度
+% \xeCJKsetwidth{‘’“”}{1em}
+
+\setcounter{secnumdepth}{0}
+
+\renewcommand{\baselinestretch}{1.3}
+
+\usepackage{fancybox}
+
+\usepackage{hyperref}
+\hypersetup{
+    % pdfusetitle=false,
+    breaklinks,
+    hidelinks,
+    pdfauthor={John Doe},
+    pdftitle={CV of John Doe},
+    pdfsubject={CV},
+    % pdfkeywords={CV, r\'{e}sum\'{e}},
+}
+
+% Always set current audience before use
+% \def\CurrentAudience{zh}
+% \def\CurrentAudience{en}
+\usepackage{multiaudience}
+\SetNewAudience{zh}
+\SetNewAudience{en}
+\newcommand{\zh}{\showto{zh}}
+\newcommand{\en}{\showto{en}}
+
+\usepackage{enumitem}
+\setlist[itemize]{
+    itemsep=0pt,
+    partopsep=0pt,
+    parsep=0pt,
+    topsep=0pt,
+}
