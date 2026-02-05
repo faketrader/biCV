@@ -1,0 +1,18 @@
+% 英文在前中文在后版本
+% dependency: main.tex, content.tex
+
+\documentclass[main.tex]{subfiles}
+
+\begin{document}
+
+% === 英文版 ===
+\def\CurrentAudience{en}
+\input{content}
+
+\clearpage
+
+% === 中文版 ===
+\def\CurrentAudience{zh}
+\input{content}
+
+\end{document}

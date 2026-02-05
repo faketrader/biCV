@@ -1,3 +1,6 @@
+## Output directory (generated PDFs)
+output/
+
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
